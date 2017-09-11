@@ -25,7 +25,7 @@ var len = 0
 var best= [];
 var finished = {};
 var yikes = 0;
-var higherIterations = 10;
+var higherIterations = 100;
 var totalBest = [];
 var index = 0;
 
@@ -41,12 +41,12 @@ function start(){
 }
 
 function reset(){
-	var results = {};
-	var wins = {};
-	var len = 0
-	var best= [];
-	var finished = {};
-	var yikes = 0;
+	results = {};
+	wins = {};
+	len = 0
+	best= [];
+	finished = {};
+	yikes = 0;
 }
 
 function main(){
@@ -81,10 +81,11 @@ function main(){
 			"Run" : index
 	  });
 	}
+	print();
 }
 
 function print(){
-	console.log(wins);
+	console.log(best);
 	for(var x in best){
 		yikes++
 		console.log("Deck - " + best[x][0]);
